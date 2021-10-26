@@ -1,0 +1,72 @@
+@import "../../App.scss";
+nav {
+  background-color: pink;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-center {
+  width: 100vw;
+  // max-width: $max-width;
+  // background-color: goldenrod;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  height: 3rem;
+}
+.navBtn {
+  transition: color 1s ease;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.navBtn .navBtn-burger {
+  width: 35px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: $clr-grey;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navBtn-burger::before,
+.navBtn-burger::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: $clr-grey;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navBtn .navBtn-burger::before {
+  transform: translateY(-12px);
+}
+
+.navBtn .navBtn-burger::after {
+  transform: translateY(12px);
+}
+
+.navBtn:hover {
+  cursor: pointer;
+}
+
+.navBtn.navToggle .navBtn-burger {
+  transform: translateX(-50px);
+  background-color: transparent;
+}
+
+.navBtn.navToggle .navBtn-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.navBtn.navToggle .navBtn-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
