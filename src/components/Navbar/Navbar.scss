@@ -1,72 +1,78 @@
 @import "../../App.scss";
 nav {
-  background-color: pink;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.nav-center {
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
   width: 100vw;
-  // max-width: $max-width;
-  // background-color: goldenrod;
+  right: 0;
+  transition: $transition;
+  padding: 1rem;
+}
+
+.nav-icons {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.nav-logo {
-  height: 3rem;
-}
-.navBtn {
-  transition: color 1s ease;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+.close-btn {
+  // position: absolute;
+  // right: 1rem;
+  color: $clr-white !important;
+  font-size: 2rem;
 }
 
-.navBtn .navBtn-burger {
-  width: 35px;
-  height: 5px;
-  border-radius: 2px;
-  background-color: $clr-grey;
-  transition: transform 0.3s ease-in-out;
+.nav-links {
+  list-style-type: none;
+  padding-top: 2rem;
 }
 
-.navBtn-burger::before,
-.navBtn-burger::after {
-  content: "";
+.nav-link {
+  color: $clr-white;
+  transition: $transition;
+}
+
+.nav-links li {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.social-links {
   position: absolute;
-  width: 35px;
-  height: 5px;
-  border-radius: 2px;
-  background-color: $clr-grey;
-  transition: transform 0.3s ease-in-out;
+  bottom: 1rem;
+  width: calc(100% - 2rem);
 }
 
-.navBtn .navBtn-burger::before {
-  transform: translateY(-12px);
+// .line {
+//   background-color: $clr-white;
+//   height: 0.01rem;
+//   width: 95%;
+//   margin: 0 auto;
+//   margin-bottom: 1rem;
+// }
+
+.social-link {
+  color: $clr-white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: $transition;
+  padding: 1rem;
+  text-transform: capitalize;
 }
 
-.navBtn .navBtn-burger::after {
-  transform: translateY(12px);
+.nav-link:hover,
+.social-link:hover,
+.close-btn:hover {
+  color: $clr-hover !important;
 }
 
-.navBtn:hover {
-  cursor: pointer;
+.nav-link:visited,
+.social-link:visited {
+  color: $clr-white;
 }
 
-.navBtn.navToggle .navBtn-burger {
-  transform: translateX(-50px);
-  background-color: transparent;
-}
-
-.navBtn.navToggle .navBtn-burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
-}
-
-.navBtn.navToggle .navBtn-burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
+@media screen and (min-width: 576px) {
+  nav {
+    max-width: 400px;
+  }
 }

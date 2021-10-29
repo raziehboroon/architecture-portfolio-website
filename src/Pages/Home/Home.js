@@ -1,4 +1,5 @@
 import React from "react";
+import "./Home.scss";
 import { useTranslation } from "react-i18next";
 import Navbar from "../../components/Navbar/Navbar";
 
@@ -9,8 +10,8 @@ const Home = () => {
   const number_of_days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
   return (
     <>
-      <Navbar />
-      <main>
+      {/* <Navbar /> */}
+      <main className="banner">
         <div className="container">
           <div className="d-flex justify-content-end"></div>
           <div className="d-flex flex-column align-items-start">

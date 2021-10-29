@@ -1,4 +1,5 @@
 import React from "react";
+import "./Language.scss";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
@@ -12,9 +13,9 @@ const languages = [
     country_code: "gb ",
   },
   {
-    code: "ar",
-    name: "العربية",
-    country_code: "sa",
+    code: "fa",
+    name: "فارسی",
+    country_code: "ir",
     dir: "rtl",
   },
 ];
@@ -41,9 +42,9 @@ const Language = () => {
         <GlobeIcon />
       </button>
       <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li>
+        {/* <li>
           <span className="dropdown-item-text">{t("language")}</span>
-        </li>
+        </li> */}
         {languages.map(({ code, name, country_code }) => (
           <li key={country_code}>
             <button
