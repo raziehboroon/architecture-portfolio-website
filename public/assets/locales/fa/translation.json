@@ -3,6 +3,7 @@
   "language": "زبان",
   "welcome_message": "خوش آمدید",
   "days_since_release": "از زمان ضبط این ویدیو {{number_of_days}} روز می گذرد.",
+  "nav_btn": "منو",
   "nav_link1": "آثار",
   "nav_link2": "درباره من",
   "nav_link3": "تماس",

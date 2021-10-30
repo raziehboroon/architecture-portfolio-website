@@ -3,6 +3,7 @@
   "language": "Language",
   "welcome_message": "Welcome",
   "days_since_release": "it's been {{number_of_days}} days since this video was released",
+  "nav_btn": "menu",
   "nav_link1": "work",
   "nav_link2": "about",
   "nav_link3": "contact",

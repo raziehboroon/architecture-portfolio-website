@@ -11,10 +11,12 @@ import Home from "./Pages/Home/Home";
 import Work from "./Pages/Work/Work";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Switch>
         <Route exact path="/">
           <Home />

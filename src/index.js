@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import { AppProvider } from "./context";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import i18n from "i18next";
@@ -8,8 +9,9 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.js";
-import "flag-icon-css/css/flag-icon.min.css"; //import flag icon css
-// import "./index.css";
+import "flag-icon-css/css/flag-icon.min.css";
+//import flag icon css
+import "./index.scss";
 import App from "./App";
 
 i18n
@@ -39,7 +41,9 @@ const loadingmarkUp = (
 ReactDOM.render(
   <Suspense fallback={loadingmarkUp}>
     <React.StrictMode>
-      <App />
+      <AppProvider>
+        <App />
+      </AppProvider>
     </React.StrictMode>
   </Suspense>,
   document.getElementById("root")

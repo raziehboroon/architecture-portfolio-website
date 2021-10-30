@@ -1,78 +1,40 @@
 @import "../../App.scss";
+
 nav {
+  height: 5rem;
   position: fixed;
-  background-color: rgb(0, 0, 0);
-  height: 100vh;
-  width: 100vw;
+  top: 0;
+  left: 0;
   right: 0;
   transition: $transition;
-  padding: 1rem;
 }
 
-.nav-icons {
+.navbar {
+  height: 100%;
+  min-width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: wheat;
+  padding: 0 2rem;
+  background-color: transparent;
 }
-.close-btn {
-  // position: absolute;
-  // right: 1rem;
-  color: $clr-white !important;
-  font-size: 2rem;
-}
-
-.nav-links {
-  list-style-type: none;
-  padding-top: 2rem;
+.nav-logo {
+  height: 3.5rem;
 }
 
-.nav-link {
-  color: $clr-white;
-  transition: $transition;
-}
-
-.nav-links li {
-  font-size: 2.5rem;
-  font-weight: bold;
+.nav-btn {
+  padding: 0.5rem 1rem;
+  border: none;
   text-transform: uppercase;
-}
-
-.social-links {
-  position: absolute;
-  bottom: 1rem;
-  width: calc(100% - 2rem);
-}
-
-// .line {
-//   background-color: $clr-white;
-//   height: 0.01rem;
-//   width: 95%;
-//   margin: 0 auto;
-//   margin-bottom: 1rem;
-// }
-
-.social-link {
-  color: $clr-white;
-  text-decoration: none;
-  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 0.02rem;
+  background-color: $clr-white;
+  color: $clr-black;
   transition: $transition;
-  padding: 1rem;
-  text-transform: capitalize;
 }
 
-.nav-link:hover,
-.social-link:hover,
-.close-btn:hover {
-  color: $clr-hover !important;
-}
-
-.nav-link:visited,
-.social-link:visited {
+.nav-btn:hover {
   color: $clr-white;
-}
-
-@media screen and (min-width: 576px) {
-  nav {
-    max-width: 400px;
-  }
+  background-color: $clr-hover;
 }
