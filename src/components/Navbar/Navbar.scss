@@ -7,6 +7,7 @@ nav {
   left: 0;
   right: 0;
   transition: $transition;
+  z-index: 10;
 }
 
 .navbar {
@@ -18,9 +19,11 @@ nav {
   background-color: wheat;
   padding: 0 2rem;
   background-color: transparent;
+  direction: ltr;
 }
 .nav-logo {
   height: 3.5rem;
+  // left: 1rem;
 }
 
 .nav-btn {
@@ -32,6 +35,8 @@ nav {
   background-color: $clr-white;
   color: $clr-black;
   transition: $transition;
+  box-shadow: $light-shadow;
+  // right: 1rem;
 }
 
 .nav-btn:hover {

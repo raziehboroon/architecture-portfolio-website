@@ -32,7 +32,7 @@ const Sidebar = () => {
       </div>
       <ul className="nav-links">
         <li>
-          <a href="/project" className="nav-link changeDir">
+          <a href="/work" className="nav-link changeDir">
             {t("nav_link1")}
           </a>
         </li>

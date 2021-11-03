@@ -1,10 +1,18 @@
-$ff-primary: "Oswald", sans-serif;
-$ff-secondary: "Permanent Marker", cursive;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&family=Tajawal:wght@300;900&display=swap");
+
+@import url("http://fonts.googleapis.com/earlyaccess/scheherazade.css");
+
+$ff-primary-en: "Oswald", sans-serif;
+$ff-secondary-en: "Permanent Marker", cursive;
+// $ff-primary-fa: "Tajawal", sans-serif;
+$ff-primary-fa: "Scheherazade", serif;
 $transition: all 0.3s ease-in-out;
 $spacing: 0.1rem;
 $radius: 0.3rem;
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $dark-shadow: 1px 5px 15px rgba(0, 0, 0, 0.4);
+$light-white-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+$dark-white-shadow: 1px 5px 15px rgba(255, 255, 255, 0.4);
 $max-width: 1170px;
 $clr-bej: #eff3f2;
 $clr-white: #fff;
@@ -18,4 +26,18 @@ $clr-hover: rgb(223, 64, 202);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+// body {
+//   // font-family: $ff-primary-en;
+// }
+
+input [lang="en"] {
+  font-family: $ff-primary-en;
+  font-size: 12px;
+}
+
+input [lang="fa"] {
+  font-family: $ff-primary-fa;
+  font-size: 14px;
 }

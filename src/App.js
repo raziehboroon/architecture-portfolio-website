@@ -12,6 +12,9 @@ import Work from "./Pages/Work/Work";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import Navbar from "./components/Navbar/Navbar";
+import Section from "./components/Section/Section";
+import Error from "./Pages/Error/Error";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -30,7 +33,12 @@ function App() {
         <Route exact path="/contact">
           <Contact />
         </Route>
+        <Route path="/projects/:{title}" children={<Section />}></Route>
+        <Route path="*">
+          <Error />
+        </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }
