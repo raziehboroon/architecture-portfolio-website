@@ -16,7 +16,7 @@
 
 .section-text {
   position: absolute;
-  // width: calc(100% - 3rem);
+  max-width: 60%;
   // overflow: hidden;
   left: 1rem;
   right: 1rem;
@@ -24,19 +24,20 @@
 }
 
 .section-text_title {
+  color: $clr-black;
+  // text-shadow: $dark-shadow;
   text-transform: uppercase;
   font-weight: bold;
+  margin-bottom: 0.4rem;
 }
 
-.section-text_title {
-  color: $clr-black;
-  text-shadow: $dark-shadow;
-}
+// .section-text_title {
+// }
 
 .section-text_subtitle {
   display: inline-block;
   color: $clr-black;
-  text-shadow: $light-shadow;
+  // text-shadow: $light-shadow;
   text-transform: capitalize;
   text-decoration: none;
   transform: $transition;
@@ -55,5 +56,9 @@
     left: 1.3rem;
     right: 2rem;
     bottom: 1.3rem;
+  }
+
+  .section-text_title {
+    margin-bottom: 0.8rem;
   }
 }

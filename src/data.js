@@ -49,7 +49,7 @@ const items = {
       name: "residental",
       title: "section_title_1",
       subtitle: "section_subtitle_1",
-      url: "/img/1506584919-Residential-Building-amman2.jpg",
+      url: "/img/istockphoto-1159873271-612x612.jpg",
     },
     {
       id: 2,
