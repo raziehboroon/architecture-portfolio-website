@@ -6,15 +6,15 @@ import { useTranslation } from "react-i18next";
 const Section = ({ url, title, subtitle, name }) => {
   const { t } = useTranslation();
   return (
-    <div className="section">
+    <article className="section">
       <img src={url} alt={title} />
       <div className="section-text">
         <h2 className="section-text_title">{t(title)}</h2>
-        <Link to={`/project/${name}`} className="section-text_subtitle">
+        <Link to={`/projects/${name}`} className="section-text_subtitle">
           <h3>{t(subtitle)}</h3>
         </Link>
       </div>
-    </div>
+    </article>
   );
 };
 

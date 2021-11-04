@@ -1,7 +1,7 @@
 @import "../../App.scss";
 
 .container-slider {
-  width: 100vw;
+  max-width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;

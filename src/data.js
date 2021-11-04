@@ -108,6 +108,7 @@ const items = {
       url: "/img/pexels-karolina-grabowska-7283170.jpg",
     },
   ],
+  projects: [],
 };
 
 export default items;

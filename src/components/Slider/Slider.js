@@ -1,5 +1,5 @@
 import "./Slider.scss";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import items from "../../data";
 import BtnSlider from "./BtnSlider";
 // import i18next from "i18next";
@@ -18,6 +18,15 @@ const Slider = () => {
       ? setSlideIndex(slideIndex - 1)
       : setSlideIndex(items.carousel.length);
   };
+
+  useEffect(() => {
+    const autoPlay = setInterval(() => {
+      slideIndex >= items.carousel.length
+        ? setSlideIndex(1)
+        : setSlideIndex(slideIndex + 1);
+    }, 3000);
+    return () => clearInterval(autoPlay);
+  });
 
   return (
     <div className="container-slider">
