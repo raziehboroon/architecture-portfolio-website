@@ -7,7 +7,8 @@ $ff-secondary-en: "Permanent Marker", cursive;
 // $ff-primary-fa: "Tajawal", sans-serif;
 $ff-primary-fa: "Scheherazade", serif;
 $transition: all 0.3s ease-in-out;
-$spacing: 0.1rem;
+$spacing-normal: 0.1rem;
+$spacing-title: -0.2nrem;
 $radius: 0.3rem;
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $dark-shadow: 1px 5px 15px rgba(0, 0, 0, 0.4);
@@ -18,7 +19,26 @@ $clr-bej: #eff3f2;
 $clr-white: #fff;
 $clr-black: #111;
 $clr-grey: #777;
+$clr-footer: #1f1a38;
 $clr-hover: rgb(223, 64, 202);
+$clr-background: hsl(210, 36%, 96%);
+$clr-primary-4: hsl(42, 63%, 48%);
+/* darkest grey - used for headings */
+$clr-grey-1: hsl(209, 61%, 16%);
+$clr-grey-3: hsl(209, 34%, 30%);
+$clr-grey-4: hsl(209, 28%, 39%);
+/* darkest grey - used for headings */
+$clr-grey-1: hsl(209, 61%, 16%);
+$clr-grey-2: hsl(211, 39%, 23%);
+$clr-grey-3: hsl(209, 34%, 30%);
+$clr-grey-4: hsl(209, 28%, 39%);
+/* grey used for paragraphs */
+$clr-grey-5: hsl(210, 22%, 49%);
+$clr-grey-6: hsl(209, 23%, 60%);
+$clr-grey-7: hsl(211, 27%, 70%);
+$clr-grey-8: hsl(210, 31%, 80%);
+$clr-grey-9: hsl(212, 33%, 89%);
+$clr-grey-10: hsl(210, 36%, 96%);
 
 *,
 ::before,
@@ -46,7 +66,7 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
+  // letter-spacing: var(--spacing-normal);
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
@@ -54,6 +74,7 @@ h4 {
 }
 h1 {
   font-size: 2rem;
+  letter-spacing: $spacing-title;
 }
 h2 {
   font-size: 1.5rem;
@@ -74,7 +95,7 @@ p {
 }
 @media screen and (min-width: 800px) {
   h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   h2 {
     font-size: 2.5rem;
@@ -93,5 +114,19 @@ p {
   h3,
   h4 {
     line-height: 1;
+  }
+}
+
+.category-container {
+  min-width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 576px) {
+  .category-container {
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 }

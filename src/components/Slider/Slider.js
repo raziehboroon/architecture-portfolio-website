@@ -23,7 +23,7 @@ const Slider = () => {
       slideIndex >= items.carousel.length
         ? setSlideIndex(1)
         : setSlideIndex(slideIndex + 1);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(autoPlay);
   });
 
@@ -36,9 +36,11 @@ const Slider = () => {
             className={`slide ${slideIndex === index + 1 && "active-anim"}`}
           >
             <img src={item.url} alt={item.title} />
-            <div className={`slide-text ${index === 0 && "first-slide"} `}>
+            <div className={`slide-text ${item.id === 0 && "first-slide"} `}>
               <h1 className="slide-text_title">{t(item.title)}</h1>
+              {/* <a href={`${item.path}`}> */}
               <h2 className="slide-text_subtitle">{t(item.subtitle)}</h2>
+              {/* </a> */}
             </div>
           </div>
         );

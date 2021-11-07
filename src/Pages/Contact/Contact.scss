@@ -1,5 +1,26 @@
 @import "../../App.scss";
 
 .contact-section {
-  min-height: calc(100vh - 5rem);
+  min-height: calc(100vh - 7rem);
+  /* Fallback for browsers that do not support Custom Properties */
+  min-height: calc(calc(var(--vh, 1vh) * 100) - 7rem);
+  padding: 4rem 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $clr-background;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: $clr-grey-1;
+  font-size: 1.25rem;
+  transition: $transition;
+}
+
+.contact-links a:hover {
+  color: $clr-hover;
 }

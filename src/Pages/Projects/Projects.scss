@@ -2,7 +2,9 @@
 
 .projects-container {
   min-width: 100%;
-  min-height: calc(100vh - 4rem);
+  min-height: calc(100vh - 7rem);
+  /* Fallback for browsers that do not support Custom Properties */
+  min-height: calc(calc(var(--vh, 1vh) * 100) - rem);
   display: grid;
   display: flex;
   align-items: flex-start;
