@@ -2,7 +2,6 @@ import "./Slider.scss";
 import React, { useEffect, useState } from "react";
 import items from "../../data";
 import BtnSlider from "./BtnSlider";
-// import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 
 const Slider = () => {
@@ -29,7 +28,7 @@ const Slider = () => {
   });
 
   return (
-    <div className="container-slider">
+    <div className="slider-container">
       {items.carousel.map((item, index) => {
         return (
           <div
@@ -47,7 +46,7 @@ const Slider = () => {
       <BtnSlider direction={"Left"} moveSlide={prevSlide} />
       <BtnSlider direction={"Right"} moveSlide={nextSlide} />
 
-      <div className="container-dots">
+      <div className="dot-container">
         {Array.from({ length: items.carousel.length }).map((dot, index) => (
           <div
             key={index}

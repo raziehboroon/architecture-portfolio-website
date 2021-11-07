@@ -43,7 +43,7 @@ const items = {
       url: "/img/vfw33x2v0ocvywho3cof.jpg",
     },
   ],
-  sections: [
+  categories: [
     {
       id: 1,
       name: "residental",

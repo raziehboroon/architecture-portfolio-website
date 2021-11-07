@@ -3,7 +3,7 @@ import React from "react";
 // import { useTranslation } from "react-i18next";
 import Slider from "../../components/Slider/Slider";
 import data from "../../data";
-import Section from "../../components/Section/Section";
+import Category from "../../components/Category/Category";
 const Home = () => {
   // const { t } = useTranslation();
   // const releaseDate = new Date("2021-03-07");
@@ -12,9 +12,9 @@ const Home = () => {
   return (
     <main>
       <Slider />
-      <div className="section-container">
-        {data.sections.map((item) => (
-          <Section key={item.id} {...item} />
+      <div className="category-container">
+        {data.categories.map((item) => (
+          <Category key={item.id} {...item} />
         ))}
       </div>
       {/* <main className="banner">
