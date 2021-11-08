@@ -32,7 +32,11 @@ const Sidebar = () => {
       </div>
       <ul className="nav-links">
         <li>
-          <a href="/work" className="nav-link changeDir">
+          <a
+            href="/#categories"
+            className="nav-link changeDir"
+            onClick={() => setShowSidebar(false)}
+          >
             {t("nav_link1")}
           </a>
         </li>
@@ -54,6 +58,7 @@ const Sidebar = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="social-link"
+          onClick={() => setShowSidebar(false)}
         >
           {t("social_link1")}
         </a>
@@ -62,6 +67,7 @@ const Sidebar = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="social-link"
+          onClick={() => setShowSidebar(false)}
         >
           {t("social_link2")}
         </a>

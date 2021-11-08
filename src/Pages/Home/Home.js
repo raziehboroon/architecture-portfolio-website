@@ -2,9 +2,10 @@ import "./Home.scss";
 import React from "react";
 // import { useTranslation } from "react-i18next";
 import Slider from "../../components/Slider/Slider";
-import data from "../../data";
 import Category from "../../components/Category/Category";
+import { useGlobalContext } from "../../context";
 const Home = () => {
+  const { categories } = useGlobalContext();
   // const { t } = useTranslation();
   // const releaseDate = new Date("2021-03-07");
   // const timeDifference = new Date() - releaseDate;
@@ -12,8 +13,8 @@ const Home = () => {
   return (
     <main>
       <Slider />
-      <div className="category-container">
-        {data.categories.map((item) => (
+      <div className="category-container" id="categories">
+        {categories.map((item) => (
           <Category key={item.id} {...item} />
         ))}
       </div>

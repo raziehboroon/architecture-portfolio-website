@@ -1,3 +1,5 @@
+// Site developed by: Razieh Boroom | Razieh.Boroon@gmail.com
+
 // import { useEffect } from "react";
 // import { useTranslation } from "react-i18next";
 // import i18next from "i18next";
@@ -8,11 +10,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./Pages/Home/Home";
-import Work from "./Pages/Work/Work";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import Navbar from "./components/Navbar/Navbar";
-// import Section from "./components/Section/Section";
 import Error from "./Pages/Error/Error";
 import Footer from "./components/Footer/Footer";
 import Projects from "./Pages/Projects/Projects";
@@ -29,9 +29,6 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
-        </Route>
-        <Route exact path="/work">
-          <Work />
         </Route>
         <Route exact path="/about">
           <About />
