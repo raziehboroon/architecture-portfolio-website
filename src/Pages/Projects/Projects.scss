@@ -5,13 +5,40 @@
   min-height: calc(100vh - 7rem);
   /* Fallback for browsers that do not support Custom Properties */
   min-height: calc(calc(var(--vh, 1vh) * 100) - 7rem);
-  display: grid;
+  background-color: $clr-background;
+  padding-top: 5rem;
+  // display: grid;
+  // grid-template-columns: repeate(auto-fit, minmax(250px, 1fr));
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: $clr-background;
+  flex-wrap: wrap;
 }
 
 .projects-container_item {
   flex-grow: 1;
+  flex-shrink: 1;
+  width: 50%;
+  // width: 45%;
+  height: 250px;
+  background-color: $clr-black;
+  margin: 0;
+}
+
+.projects-container_item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.projects-container_item h4 {
+  // min-height: 30%;
+  // margin: auto 0.2rem;
+  color: $clr-white;
+}
+
+@media screen and(min-width: 576px) {
+  .projects-container_item {
+    max-width: 350px;
+  }
 }

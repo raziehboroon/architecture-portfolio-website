@@ -60,7 +60,7 @@ const items = {
     },
     {
       id: 2,
-      name: "interiordesign",
+      name: "interior",
       title: "category_title_2",
       subtitle: "category_subtitle_2",
       url: "/img/pexels-vecislavas-popa-1571459.jpg",
@@ -183,11 +183,10 @@ const items = {
       desc: "project_desc_5",
       year: "project_year_5",
       images: [
-        { url: "/img/projects/5/4c84b5e0-abd5-452c-8f91-b27edc34354c.jpg" },
-        { url: "/img/projects/5/76b3a5a0-c766-45d8-a235-3ec22d901ed5.jpg" },
-        { url: "/img/projects/5/fine0002ed.jpg" },
-        { url: "/img/projects/5/IMG_4254.jpg" },
-        { url: "/img/projects/5/IMG_7594.jpg" },
+        { url: "/img/projects/5/02!.jpg" },
+        { url: "/img/projects/5/08.jpg" },
+        { url: "/img/projects/5/09 (2).jpg" },
+        { url: "/img/projects/5/09.jpg" },
       ],
     },
     {
@@ -255,7 +254,7 @@ const items = {
     },
     {
       id: 11,
-      category: ["residental, vila"],
+      category: ["residental", "building"],
       title: "project_title_11",
       location: "project_location_11",
       desc: "project_desc_11",
@@ -272,7 +271,7 @@ const items = {
     },
     {
       id: 12,
-      category: ["residental", "vila"],
+      category: ["residental", "building"],
       title: "project_title_12",
       location: "project_location_12",
       desc: "project_desc_12",
