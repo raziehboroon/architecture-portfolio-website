@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import data from "./data";
+// import SingleProject from "./Pages/SingleProject/SingleProject";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
@@ -14,6 +15,10 @@ const AppProvider = ({ children }) => {
   const [currentCategory, setCurrentCategory] = useState("");
   // filtered projects of a specific category
   const [currentProjects, setCurrentProjects] = useState([]);
+  //singleProject id
+  const [singleProjectId, setSingleProjectId] = useState(0);
+  // single project array
+  const [singleProjectArr, setSingleProjectArr] = useState([]);
 
   useEffect(() => {
     setCategories(data.categories);
@@ -40,6 +45,13 @@ const AppProvider = ({ children }) => {
 
   // console.log(categoriesCount);
 
+  useEffect(() => {
+    const getSingleProject = (singleProjectId) => {
+      return projects.filter((project) => project.id === singleProjectId);
+    };
+    setSingleProjectArr(getSingleProject(singleProjectId));
+  }, [singleProjectId, projects]);
+
   return (
     <AppContext.Provider
       value={{
@@ -49,6 +61,8 @@ const AppProvider = ({ children }) => {
         categoriesCount,
         setCurrentCategory,
         currentProjects,
+        setSingleProjectId,
+        singleProjectArr,
       }}
     >
       {children}

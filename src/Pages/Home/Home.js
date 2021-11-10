@@ -4,6 +4,8 @@ import React from "react";
 import Slider from "../../components/Slider/Slider";
 import Category from "../../components/Category/Category";
 import { useGlobalContext } from "../../context";
+import items from "../../data";
+
 const Home = () => {
   const { categories } = useGlobalContext();
   // const { t } = useTranslation();
@@ -12,7 +14,7 @@ const Home = () => {
   // const number_of_days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
   return (
     <main>
-      <Slider />
+      <Slider slideData={items.carousel} slideInfo={true} />
       <div className="category-container" id="categories">
         {categories.map((item) => (
           <Category key={item.id} {...item} />
