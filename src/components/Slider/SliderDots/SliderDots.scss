@@ -1,0 +1,32 @@
+@import "../../../App.scss";
+
+.dot-container {
+  position: absolute;
+  width: 100%;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: ltr;
+}
+
+.dot {
+  display: inline-block;
+  background-color: white;
+  border: 0.2rem solid white;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0.3rem;
+  border-radius: 50%;
+  box-shadow: $dark-shadow;
+  transition: $transition;
+}
+
+.dot.active {
+  background-color: $clr-black;
+}
+
+.dot:hover {
+  background-color: $clr-hover;
+  border-color: $clr-hover;
+}

@@ -14,7 +14,16 @@ const Home = () => {
   // const number_of_days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
   return (
     <main>
-      <Slider slideData={items.carousel} slideInfo={true} />
+      <Slider
+        slideData={items.carousel}
+        slideInfo={true}
+        slideRightButton={true}
+        slideLeftButton={true}
+        slideDots={true}
+        sliderWidth={100}
+        sliderHeight={100}
+        slideSize={"cover"}
+      />
       <div className="category-container" id="categories">
         {categories.map((item) => (
           <Category key={item.id} {...item} />

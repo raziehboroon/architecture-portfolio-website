@@ -1,24 +1,13 @@
 import React from "react";
 import "./Sidebar.scss";
+import { Link } from "react-router-dom";
 import { VscChromeClose } from "react-icons/vsc";
 import Language from "../Language/Language";
 import { useTranslation } from "react-i18next";
 import { useGlobalContext } from "../../context.js";
-// import i18next from "i18next";
-// import cookies from "js-cookie";
-// import { languages } from "../Language/Language";
+
 const Sidebar = () => {
-  // const currentLanguageCode = cookies.get("i18next") || "en";
-  // const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
   const { t } = useTranslation();
-
-  // useEffect(() => {
-  //   // document.body.dir = currentLanguage.dir || "ltr";
-  //   document.body.
-  //   document.title = t("app_title");
-  // }, [currentLanguage, t]);
-
-  // const { t } = useTranslation();
   const { showSidebar, setShowSidebar } = useGlobalContext();
 
   return (
@@ -32,23 +21,31 @@ const Sidebar = () => {
       </div>
       <ul className="nav-links">
         <li>
-          <a
-            href="/#categories"
+          <Link
+            to="/#categories"
             className="nav-link changeDir"
             onClick={() => setShowSidebar(false)}
           >
             {t("nav_link1")}
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/about" className="nav-link changeDir">
+          <Link
+            to="/about"
+            className="nav-link changeDir"
+            onClick={() => setShowSidebar(false)}
+          >
             {t("nav_link2")}
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/contact" className="nav-link changeDir">
+          <Link
+            to="/contact"
+            className="nav-link changeDir"
+            onClick={() => setShowSidebar(false)}
+          >
             {t("nav_link3")}
-          </a>
+          </Link>
         </li>
       </ul>
       <div className="social-links">

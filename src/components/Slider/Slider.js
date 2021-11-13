@@ -1,10 +1,20 @@
 import "./Slider.scss";
 import React, { useEffect, useState } from "react";
 import BtnSlider from "./BtnSlider";
-import { useTranslation } from "react-i18next";
+import styled from "styled-components";
+import SliderDots from "./SliderDots/SliderDots";
+import SlideInfo from "./SlideInfo/SlideInfo";
 
-const Slider = ({ slideData, slideInfo }) => {
-  const { t } = useTranslation();
+const Slider = ({
+  slideData,
+  slideInfo,
+  slideRightButton,
+  slideLeftButton,
+  slideDots,
+  sliderWidth,
+  sliderHeight,
+  slideSize,
+}) => {
   const [slideIndex, setSlideIndex] = useState(1);
   const nextSlide = () => {
     slideIndex < slideData.length
@@ -27,7 +37,7 @@ const Slider = ({ slideData, slideInfo }) => {
   });
 
   return (
-    <div className="slider-container">
+    <SlideWrapper sliderWidth={sliderWidth} sliderHeight={sliderHeight}>
       {slideData.map((item, index) => {
         return (
           <div
@@ -35,33 +45,51 @@ const Slider = ({ slideData, slideInfo }) => {
             key={index}
             className={`slide ${slideIndex === index + 1 && "active-anim"}`}
           >
-            <img src={item.url} alt={""} />
-            {/* alt={t(item.title)} */}
+            <SlideImage src={item.url} size={slideSize} />
             {slideInfo && (
-              <div className={`slide-text ${item.id === 1 && "first-slide"} `}>
-                <h1 className="slide-text_title">{t(item.title)}</h1>
-                {/* <a href={`${item.path}`}> */}
-                <h2 className="slide-text_subtitle">{t(item.subtitle)}</h2>
-                {/* </a> */}
-              </div>
+              <SlideInfo
+                id={item.id}
+                title={item.title}
+                subtitle={item.subtitle}
+              ></SlideInfo>
             )}
           </div>
         );
       })}
-      <BtnSlider direction={"Left"} moveSlide={prevSlide} />
-      <BtnSlider direction={"Right"} moveSlide={nextSlide} />
-
-      <div className="dot-container">
-        {Array.from({ length: slideData.length }).map((dot, index) => (
-          <div
-            key={index}
-            className={`dot ${slideIndex === index + 1 && "active"}`}
-            onClick={() => setSlideIndex(index + 1)}
-          ></div>
-        ))}
-      </div>
-    </div>
+      {slideLeftButton && (
+        <BtnSlider direction={"Left"} moveSlide={prevSlide} />
+      )}
+      {slideRightButton && (
+        <BtnSlider direction={"Right"} moveSlide={nextSlide} />
+      )}
+      {slideDots && (
+        <SliderDots
+          arrLength={slideData.length}
+          slideIndex={slideIndex}
+          setSlideIndex={setSlideIndex}
+        />
+      )}
+    </SlideWrapper>
   );
 };
 
 export default Slider;
+
+const SlideWrapper = styled.div`
+  max-width: ${(props) => props.sliderWidth}%;
+  height: ${(props) => props.sliderHeight}vh;
+  /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * (${(props) => props.sliderHeight}));
+  position: relative;
+  overflow: hidden;
+  box-shadow: $light_shadow;
+  flex-grow: 1;
+`;
+
+const SlideImage = styled.img.attrs((props) => ({
+  src: props.src,
+}))`
+  width: 100%;
+  height: 100%;
+  object-fit: ${(props) => props.size};
+`;

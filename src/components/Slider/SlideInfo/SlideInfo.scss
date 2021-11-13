@@ -1,0 +1,30 @@
+@import "../../../App.scss";
+
+.slide-text {
+  max-width: 50%;
+  position: absolute;
+  padding: 0 1rem;
+  color: $clr-white;
+  text-shadow: $dark-shadow;
+  // text-align: left;
+  text-justify: inter-word;
+  bottom: 4rem;
+}
+.slide-text.first-slide {
+  color: $clr-black;
+}
+.slide-text_title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.slide-text_subtitle {
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 576px) {
+  .slide-text {
+    // max-width: 25%;
+    padding: 0 3rem;
+    bottom: 6rem;
+  }
+}
