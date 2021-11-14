@@ -1,20 +1,23 @@
 import React, { useEffect } from "react";
 import "./SingleProject.scss";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../context";
 import Slider from "../../components/Slider/Slider";
 import { useTranslation } from "react-i18next";
+import { RiLayoutGridFill } from "react-icons/ri";
 
 const SingleProject = () => {
   const { t } = useTranslation();
-  const { id } = useParams();
-  const { setSingleProjectId, singleProjectArr } = useGlobalContext();
-  // console.log(singleProjectArr);
+  const { id, title } = useParams();
+  const { setSingleProjectId, singleProjectArr, categories } =
+    useGlobalContext();
   useEffect(() => {
     setSingleProjectId(parseInt(id));
   }, [id, setSingleProjectId]);
-  // console.log(parseInt(id));
-  // console.log(singleProjectArr);
+
+  const btnText = categories.find((cat) => cat.name === title).title;
+
   return (
     <>
       {singleProjectArr.length !== 0 && (
@@ -31,12 +34,21 @@ const SingleProject = () => {
             className="singleProject_slider"
           />
           <div className="singleProject_info">
-            <h2>{t(singleProjectArr[0].title)}</h2>
-            <h3>
-              {t(singleProjectArr[0].location)}
-              {" / "}
-              <span>{t(singleProjectArr[0].year)}</span>
-            </h3>
+            <div className="singleProject_text">
+              <h2>{t(singleProjectArr[0].title)}</h2>
+              <h3>
+                {t(singleProjectArr[0].location)}
+                {" / "}
+                <span>{t(singleProjectArr[0].year)}</span>
+              </h3>
+            </div>
+            <Link to={`/projects/${title}`} className="singleProject_btn">
+              <h3>
+                <RiLayoutGridFill className="singleProject_icon" />
+
+                {` ${t("btn_prefix")} ${t(btnText)}`}
+              </h3>
+            </Link>
           </div>
         </div>
       )}

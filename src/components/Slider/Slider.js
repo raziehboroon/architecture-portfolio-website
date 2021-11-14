@@ -45,7 +45,7 @@ const Slider = ({
             key={index}
             className={`slide ${slideIndex === index + 1 && "active-anim"}`}
           >
-            <SlideImage src={item.url} size={slideSize} />
+            <SlideImage src={item.url} size={slideSize} alt={item.title} />
             {slideInfo && (
               <SlideInfo
                 id={item.id}

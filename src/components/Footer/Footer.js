@@ -35,7 +35,7 @@ const Footer = () => {
         </a>
       </div>
       <small className="footer_developer-info">
-        Site Developed by: Razieh Boroon
+        Developed by: Razieh Boroon
       </small>
     </footer>
   );

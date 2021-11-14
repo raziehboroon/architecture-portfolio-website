@@ -37,6 +37,10 @@
   align-items: center;
   justify-content: center;
 }
+
+.project-footer h4 {
+  color: $clr-white;
+}
 .project-overrelay {
   width: 100%;
   height: 200px;
@@ -49,8 +53,8 @@
   transition: $transition;
   padding: 0.5rem;
 }
-
-.projects-container h4 {
+.project-overrelay h3,
+.project-overrelay h4 {
   color: $clr-white;
 }
 

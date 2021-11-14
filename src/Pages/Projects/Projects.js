@@ -17,7 +17,10 @@ const Projects = () => {
       {currentProjects.map((project) => {
         return (
           <article key={project.id} className="project-container">
-            <Link to={`/projects/${title}/${project.id}`}>
+            <Link
+              to={`/projects/${title}/${project.id}`}
+              style={{ textDecoration: "none" }}
+            >
               <img src={project.images[0].url} alt={t(project.title)} />
               <div className="project-footer">
                 <h4>{t(project.title)}</h4>

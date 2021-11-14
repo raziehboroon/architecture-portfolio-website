@@ -3,11 +3,11 @@ import React from "react";
 // import { useTranslation } from "react-i18next";
 import Slider from "../../components/Slider/Slider";
 import Category from "../../components/Category/Category";
-import { useGlobalContext } from "../../context";
+// import { useGlobalContext } from "../../context";
 import items from "../../data";
 
 const Home = () => {
-  const { categories } = useGlobalContext();
+  // const { categories } = useGlobalContext();
   // const { t } = useTranslation();
   // const releaseDate = new Date("2021-03-07");
   // const timeDifference = new Date() - releaseDate;
@@ -24,11 +24,11 @@ const Home = () => {
         sliderHeight={100}
         slideSize={"cover"}
       />
-      <div className="category-container" id="categories">
-        {categories.map((item) => (
+
+      {/* {categories.map((item) => (
           <Category key={item.id} {...item} />
-        ))}
-      </div>
+        ))} */}
+      <Category />
       {/* <main className="banner">
         <div className="container">
           <div className="d-flex justify-content-end"></div>
