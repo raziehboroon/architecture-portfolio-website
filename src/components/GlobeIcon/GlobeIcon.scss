@@ -2,8 +2,7 @@
 .bi-globe {
   color: $clr-white;
   transition: $transition;
-}
-
-.bi-globe:hover {
-  color: $clr-hover;
+  &:hover {
+    color: $clr-hover;
+  }
 }

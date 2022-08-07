@@ -9,28 +9,29 @@ footer {
   justify-content: center;
   color: $clr-grey-5;
   position: relative;
+  .footer_developer-info {
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0.2rem;
+    font-size: 0.7rem;
+    a {
+      text-decoration: none;
+    }
+  }
 }
 .footer-links {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.footer-links a {
-  font-size: 2rem;
-  color: $clr-grey-8;
-  padding: 0.2rem 0.5rem;
-  transition: $transition;
-}
-
-.footer-links a:hover {
-  color: $clr-hover;
-}
-
-.footer_developer-info {
-  position: absolute;
-  bottom: 0.2rem;
-  right: 0.2rem;
-  font-size: 0.7rem;
+  a {
+    font-size: 2rem;
+    color: $clr-grey-8;
+    padding: 0.2rem 0.5rem;
+    transition: $transition;
+    &:hover {
+      color: $clr-hover;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {

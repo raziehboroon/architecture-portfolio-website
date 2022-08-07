@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
-import { AppProvider } from "./context";
+import { AppProvider } from "./context/context";
 import ReactDOM from "react-dom";
-import reportWebVitals from "./reportWebVitals";
 import i18n from "i18next";
 // import { useTranslation, initReactI18next } from "react-i18next";
 import { initReactI18next } from "react-i18next";
@@ -31,7 +30,7 @@ i18n
     // },
   });
 
-// append app to do m
+// append app to dom
 // ReactDOM.render(<App />, document.getElementById("root"));
 const loadingmarkUp = (
   <div className="py-4 text-center">
@@ -48,11 +47,6 @@ ReactDOM.render(
   </Suspense>,
   document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
 
 // i18n
 //   .use(initReactI18next) // passes i18n down to react-i18next

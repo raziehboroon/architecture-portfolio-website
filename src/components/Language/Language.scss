@@ -3,8 +3,7 @@
 .dropdown-toggle {
   color: $clr-white;
   transition: $transition;
-}
-
-.dropdown-toggle:hover {
-  color: $clr-hover;
+  &:hover {
+    color: $clr-hover;
+  }
 }

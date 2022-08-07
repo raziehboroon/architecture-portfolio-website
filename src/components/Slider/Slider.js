@@ -3,7 +3,9 @@ import React, { useEffect, useState } from "react";
 import BtnSlider from "./BtnSlider";
 import styled from "styled-components";
 import SliderDots from "./SliderDots/SliderDots";
-import SlideInfo from "./SlideInfo/SlideInfo";
+// import SlideInfo from "./SlideInfo/SlideInfo";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Slider = ({
   slideData,
@@ -15,7 +17,12 @@ const Slider = ({
   sliderHeight,
   slideSize,
 }) => {
+  const { t } = useTranslation();
   const [slideIndex, setSlideIndex] = useState(1);
+  // const [imageLoaded, setImageLoaded] = useState(
+  // Array.from({ length: slideData.length }, (v, i) => false)
+  // );
+
   const nextSlide = () => {
     slideIndex < slideData.length
       ? setSlideIndex(slideIndex + 1)
@@ -28,6 +35,7 @@ const Slider = ({
   };
 
   useEffect(() => {
+    // console.log(imageLoaded);
     const autoPlay = setInterval(() => {
       slideIndex >= slideData.length
         ? setSlideIndex(1)
@@ -41,18 +49,35 @@ const Slider = ({
       {slideData.map((item, index) => {
         return (
           <div
-            // key={item.id}
-            key={index}
+            key={item.id}
+            // key={index}
             className={`slide ${slideIndex === index + 1 && "active-anim"}`}
           >
-            <SlideImage src={item.url} size={slideSize} alt={item.title} />
-            {slideInfo && (
-              <SlideInfo
+            <Link to={`${item.path}`}>
+              <SlideImage
+                key={item.id}
+                src={item.url}
+                size={slideSize}
+                alt={item.title}
+                // onLoad={() => setImageLoaded[index](true)}
+                // onError={setImageLoaded[item.index](false)}
+              />
+              {slideInfo && (
+                <div
+                  className={`slide-text ${item.id === 1 && "first-slide"} `}
+                >
+                  <h1 className="slide-text_title">{t(item.title)}</h1>
+
+                  <h2 className="slide-text_subtitle">{t(item.subtitle)}</h2>
+                </div>
+              )}
+              {/* <SlideInfo
                 id={item.id}
                 title={item.title}
                 subtitle={item.subtitle}
-              ></SlideInfo>
-            )}
+                path={item.path}
+              ></SlideInfo> */}
+            </Link>
           </div>
         );
       })}

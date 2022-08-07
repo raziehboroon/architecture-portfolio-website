@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { VscChromeClose } from "react-icons/vsc";
 import Language from "../Language/Language";
 import { useTranslation } from "react-i18next";
-import { useGlobalContext } from "../../context.js";
+import { useGlobalContext } from "../../context/context.js";
 
 const Sidebar = () => {
   const { t } = useTranslation();
@@ -22,7 +22,7 @@ const Sidebar = () => {
       <ul className="nav-links">
         <li>
           <Link
-            to="/#categories"
+            to="/"
             className="nav-link changeDir"
             onClick={() => setShowSidebar(false)}
           >
@@ -31,7 +31,7 @@ const Sidebar = () => {
         </li>
         <li>
           <Link
-            to="/about"
+            to="/#categories"
             className="nav-link changeDir"
             onClick={() => setShowSidebar(false)}
           >
@@ -40,11 +40,20 @@ const Sidebar = () => {
         </li>
         <li>
           <Link
-            to="/contact"
+            to="/about"
             className="nav-link changeDir"
             onClick={() => setShowSidebar(false)}
           >
             {t("nav_link3")}
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/contact"
+            className="nav-link changeDir"
+            onClick={() => setShowSidebar(false)}
+          >
+            {t("nav_link4")}
           </Link>
         </li>
       </ul>

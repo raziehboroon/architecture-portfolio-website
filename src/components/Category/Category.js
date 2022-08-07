@@ -2,7 +2,7 @@ import React from "react";
 import "./Category.scss";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useGlobalContext } from "../../context";
+import { useGlobalContext } from "../../context/context";
 
 const Category = () => {
   const { categories, categoriesCount } = useGlobalContext();

@@ -12,42 +12,42 @@ const items = {
       title: "carousel_title_2",
       subtitle: "carousel_subtitle_2",
       url: "/img/pexels-vecislavas-popa-1571459.jpg",
-      path: "",
+      path: "/projects/interior",
     },
     {
       id: 3,
       title: "carousel_title_3",
       subtitle: "carousel_subtitle_3",
       url: "/img/dannie-jing-3GZlhROZIQg-unsplash.jpg",
-      path: "",
+      path: "/projects/painting",
     },
     {
       id: 4,
       title: "carousel_title_4",
       subtitle: "carousel_subtitle_4",
       url: "/img/pexels-karolina-grabowska-7283170.jpg",
-      path: "",
+      path: "/projects/fashion",
     },
     {
       id: 5,
       title: "carousel_title_5",
       subtitle: "carousel_subtitle_5",
       url: "/img/144aa06e3533a4d74e21603b07cee465.jpg",
-      path: "",
+      path: "/projects/lighting",
     },
     {
       id: 6,
       title: "carousel_title_6",
       subtitle: "carousel_subtitle_6",
       url: "/img/0110.jpg",
-      path: "",
+      path: "/projects/sculpture",
     },
     {
       id: 7,
       title: "carousel_title_7",
       subtitle: "carousel_subtitle_7",
       url: "/img/vfw33x2v0ocvywho3cof.jpg",
-      path: "",
+      path: "/about",
     },
   ],
   categories: [
@@ -124,10 +124,26 @@ const items = {
       desc: "project_desc_1",
       year: "project_year_1",
       images: [
-        { url: "/img/projects/1/IMG_8484.JPG", title: "project 1 image" },
-        { url: "/img/projects/1/IMG_8451.JPG", title: "project 1 image" },
-        { url: "/img/projects/1/IMG_8468.JPG", title: "project 1 image" },
-        { url: "/img/projects/1/IMG_8487.JPG", title: "project 1 image" },
+        {
+          id: 1,
+          url: "/img/projects/1/IMG_8484.JPG",
+          title: "project 1 image",
+        },
+        {
+          id: 2,
+          url: "/img/projects/1/IMG_8451.JPG",
+          title: "project 1 image",
+        },
+        {
+          id: 3,
+          url: "/img/projects/1/IMG_8468.JPG",
+          title: "project 1 image",
+        },
+        {
+          id: 4,
+          url: "/img/projects/1/IMG_8487.JPG",
+          title: "project 1 image",
+        },
       ],
     },
     {
@@ -138,12 +154,26 @@ const items = {
       desc: "project_desc_2",
       year: "project_year_2",
       images: [
-        { url: "/img/projects/2/IMG_3024.jpg", title: "project 1 image" },
-        { url: "/img/projects/2/IMG_3026.jpg", title: "project 1 image" },
-        { url: "/img/projects/2/IMG_3028.jpg", title: "project 1 image" },
-        { url: "/img/projects/2/IMG_3029.jpg", title: "project 1 image" },
-        { url: "/img/projects/2/09 (2).jpg", title: "project 1 image" },
-        { url: "/img/projects/2/09.jpg", title: "project 1 image" },
+        {
+          id: 1,
+          url: "/img/projects/2/IMG_3024.jpg",
+          title: "project 1 image",
+        },
+        {
+          id: 2,
+          url: "/img/projects/2/IMG_3026.jpg",
+          title: "project 1 image",
+        },
+        {
+          id: 3,
+          url: "/img/projects/2/IMG_3028.jpg",
+          title: "project 1 image",
+        },
+        {
+          id: 4,
+          url: "/img/projects/2/IMG_3029.jpg",
+          title: "project 1 image",
+        },
       ],
     },
     {
@@ -154,11 +184,31 @@ const items = {
       desc: "project_desc_3",
       year: "project_year_3",
       images: [
-        { url: "/img/projects/3/IMG_2185.jpg", title: "project 3 image" },
-        { url: "/img/projects/3/IMG_2200.jpg", title: "project 3 image" },
-        { url: "/img/projects/3/IMG_2202.jpg", title: "project 3 image" },
-        { url: "/img/projects/3/IMG_2206.jpg", title: "project 3 image" },
-        { url: "/img/projects/3/IMG_2212.jpg", title: "project 3 image" },
+        {
+          id: 1,
+          url: "/img/projects/3/IMG_2185.jpg",
+          title: "project 3 image",
+        },
+        {
+          id: 2,
+          url: "/img/projects/3/IMG_2200.jpg",
+          title: "project 3 image",
+        },
+        {
+          id: 3,
+          url: "/img/projects/3/IMG_2202.jpg",
+          title: "project 3 image",
+        },
+        {
+          id: 4,
+          url: "/img/projects/3/IMG_2206.jpg",
+          title: "project 3 image",
+        },
+        {
+          id: 5,
+          url: "/img/projects/3/IMG_2212.jpg",
+          title: "project 3 image",
+        },
       ],
     },
     {
@@ -169,10 +219,10 @@ const items = {
       desc: "project_desc_4",
       year: "project_year_4",
       images: [
-        { url: "/img/projects/4/IMG_1879.jpg", title: "project 4 img" },
-        { url: "/img/projects/4/IMG_1804.jpg", title: "project 4 img" },
-        { url: "/img/projects/4/IMG_1816.jpg", title: "project 4 img" },
-        { url: "/img/projects/4/IMG_1835.jpg", title: "project 4 img" },
+        { id: 1, url: "/img/projects/4/IMG_1879.jpg", title: "project 4 img" },
+        { id: 2, url: "/img/projects/4/IMG_1804.jpg", title: "project 4 img" },
+        { id: 3, url: "/img/projects/4/IMG_1816.jpg", title: "project 4 img" },
+        { id: 4, url: "/img/projects/4/IMG_1835.jpg", title: "project 4 img" },
       ],
     },
     {
@@ -183,10 +233,10 @@ const items = {
       desc: "project_desc_5",
       year: "project_year_5",
       images: [
-        { url: "/img/projects/5/02!.jpg", title: "project 5 image" },
-        { url: "/img/projects/5/08.jpg", title: "project 5 image" },
-        { url: "/img/projects/5/09 (2).jpg", title: "project 5 image" },
-        { url: "/img/projects/5/09.jpg", title: "project 5 image" },
+        { id: 1, url: "/img/projects/5/02!.jpg", title: "project 5 image" },
+        { id: 2, url: "/img/projects/5/08.jpg", title: "project 5 image" },
+        { id: 3, url: "/img/projects/5/09 (2).jpg", title: "project 5 image" },
+        { id: 4, url: "/img/projects/5/09.jpg", title: "project 5 image" },
       ],
     },
     {
@@ -197,8 +247,8 @@ const items = {
       desc: "project_desc_6",
       year: "project_year_6",
       images: [
-        { url: "/img/projects/6/012.jpg", title: "project 6 image" },
-        { url: "/img/projects/6/013.jpg", title: "project 6 image" },
+        { id: 1, url: "/img/projects/6/012.jpg", title: "project 6 image" },
+        { id: 2, url: "/img/projects/6/013.jpg", title: "project 6 image" },
       ],
     },
     {
@@ -209,10 +259,10 @@ const items = {
       desc: "project_desc_7",
       year: "project_year_7",
       images: [
-        { url: "/img/projects/7/014.jpg", title: "project 7 image" },
-        { url: "/img/projects/7/015.jpg", title: "project 7 image" },
-        { url: "/img/projects/7/016.jpg", title: "project 7 image" },
-        { url: "/img/projects/7/017.jpg", title: "project 7 image" },
+        { id: 1, url: "/img/projects/7/014.jpg", title: "project 7 image" },
+        { id: 2, url: "/img/projects/7/015.jpg", title: "project 7 image" },
+        { id: 3, url: "/img/projects/7/016.jpg", title: "project 7 image" },
+        { id: 4, url: "/img/projects/7/017.jpg", title: "project 7 image" },
       ],
     },
     {
@@ -223,10 +273,10 @@ const items = {
       desc: "project_desc_8",
       year: "project_year_8",
       images: [
-        { url: "/img/projects/8/018.jpg", title: "project 8 image" },
-        { url: "/img/projects/8/019.jpg", title: "project 8 image" },
-        { url: "/img/projects/8/0110.jpg", title: "project 8 image" },
-        { url: "/img/projects/8/0111.jpg", title: "project 8 image" },
+        { id: 1, url: "/img/projects/8/018.jpg", title: "project 8 image" },
+        { id: 2, url: "/img/projects/8/019.jpg", title: "project 8 image" },
+        { id: 3, url: "/img/projects/8/0110.jpg", title: "project 8 image" },
+        { id: 4, url: "/img/projects/8/0111.jpg", title: "project 8 image" },
       ],
     },
     {
@@ -248,10 +298,26 @@ const items = {
       desc: "project_desc_10",
       year: "project_year_10",
       images: [
-        { url: "/img/projects/10/IMG_2636.jpg", title: "project 10 image" },
-        { url: "/img/projects/10/IMG_2871 01.jpg", title: "project 10 image" },
-        { url: "/img/projects/10/IMG_2871.jpg", title: "project 10 image" },
-        { url: "/img/projects/10/IMG_7081.jpg", title: "project 10 image" },
+        {
+          id: 1,
+          url: "/img/projects/10/IMG_2636.jpg",
+          title: "project 10 image",
+        },
+        {
+          id: 2,
+          url: "/img/projects/10/IMG_2871 01.jpg",
+          title: "project 10 image",
+        },
+        {
+          id: 3,
+          url: "/img/projects/10/IMG_2871.jpg",
+          title: "project 10 image",
+        },
+        {
+          id: 4,
+          url: "/img/projects/10/IMG_7081.jpg",
+          title: "project 10 image",
+        },
       ],
     },
     {
@@ -262,13 +328,37 @@ const items = {
       desc: "project_desc_11",
       year: "project_year_11",
       images: [
-        { url: "/img/projects/11/image 2.jpg", title: "project 11 image" },
-        { url: "/img/projects/11/image 3.jpg", title: "project 11 image" },
-        { url: "/img/projects/11/image.jpg", title: "project 11 image" },
-        { url: "/img/projects/11/IMG_0276.jpg", title: "project 11 image" },
-        { url: "/img/projects/11/IMG_0597.jpg", title: "project 11 image" },
-        { url: "/img/projects/11/IMG_0604.jpg", title: "project 11 image" },
-        { url: "/img/projects/11/IMG_9305.jpg", title: "project 11 image" },
+        {
+          id: 1,
+          url: "/img/projects/11/image 2.jpg",
+          title: "project 11 image",
+        },
+        {
+          id: 2,
+          url: "/img/projects/11/image 3.jpg",
+          title: "project 11 image",
+        },
+        { id: 3, url: "/img/projects/11/image.jpg", title: "project 11 image" },
+        {
+          id: 4,
+          url: "/img/projects/11/IMG_0276.jpg",
+          title: "project 11 image",
+        },
+        {
+          id: 5,
+          url: "/img/projects/11/IMG_0597.jpg",
+          title: "project 11 image",
+        },
+        {
+          id: 6,
+          url: "/img/projects/11/IMG_0604.jpg",
+          title: "project 11 image",
+        },
+        {
+          id: 7,
+          url: "/img/projects/11/IMG_9305.jpg",
+          title: "project 11 image",
+        },
       ],
     },
     {
@@ -279,11 +369,31 @@ const items = {
       desc: "project_desc_12",
       year: "project_year_12",
       images: [
-        { url: "/img/projects/12/image2.jpg", title: "project 12 image" },
-        { url: "/img/projects/12/IMG_0277.jpg", title: "project 12 image" },
-        { url: "/img/projects/12/IMG_5290.jpg", title: "project 12 image" },
-        { url: "/img/projects/12/IMG_7705.jpg", title: "project 12 image" },
-        { url: "/img/projects/12/IMG_7706.jpg", title: "project 12 image" },
+        {
+          id: 1,
+          url: "/img/projects/12/image2.jpg",
+          title: "project 12 image",
+        },
+        {
+          id: 2,
+          url: "/img/projects/12/IMG_0277.jpg",
+          title: "project 12 image",
+        },
+        {
+          id: 3,
+          url: "/img/projects/12/IMG_5290.jpg",
+          title: "project 12 image",
+        },
+        {
+          id: 4,
+          url: "/img/projects/12/IMG_7705.jpg",
+          title: "project 12 image",
+        },
+        {
+          id: 5,
+          url: "/img/projects/12/IMG_7706.jpg",
+          title: "project 12 image",
+        },
       ],
     },
   ],

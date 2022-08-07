@@ -35,7 +35,10 @@ const Footer = () => {
         </a>
       </div>
       <small className="footer_developer-info">
-        Developed by: Razieh Boroon
+        Developed by:{" "}
+        <a href="https://rboroon.com" target="_blank" rel="noopener noreferrer">
+          rboroon
+        </a>
       </small>
     </footer>
   );

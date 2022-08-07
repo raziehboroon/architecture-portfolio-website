@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Projects.scss";
 import { Link } from "react-router-dom";
-import { useGlobalContext } from "../../context";
+import { useGlobalContext } from "../../../context/context";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router";
 const Projects = () => {

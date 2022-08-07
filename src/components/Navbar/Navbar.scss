@@ -21,26 +21,25 @@ nav {
   padding: 0 2rem;
   background-color: transparent;
   direction: ltr;
-}
-.nav-logo {
-  height: 3.5rem;
-  // left: 1rem;
-}
+  .nav-logo {
+    height: 3.5rem;
+    // left: 1rem;
+  }
+  .nav-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.02rem;
+    background-color: $clr-white;
+    color: $clr-black;
+    transition: $transition;
+    box-shadow: $light-shadow;
+    // right: 1rem;
 
-.nav-btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 0.02rem;
-  background-color: $clr-white;
-  color: $clr-black;
-  transition: $transition;
-  box-shadow: $light-shadow;
-  // right: 1rem;
-}
-
-.nav-btn:hover {
-  color: $clr-white;
-  background-color: $clr-hover;
+    &:hover {
+      color: $clr-white;
+      background-color: $clr-hover;
+    }
+  }
 }

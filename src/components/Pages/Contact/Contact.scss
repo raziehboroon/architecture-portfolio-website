@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@import "../../../App.scss";
 
 .contact-section {
   min-height: calc(100vh - 7rem);
@@ -9,18 +9,16 @@
   align-items: center;
   justify-content: center;
   background-color: $clr-background;
-}
-
-.contact-links a {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-  text-decoration: none;
-  color: $clr-grey-1;
-  font-size: 1.25rem;
-  transition: $transition;
-}
-
-.contact-links a:hover {
-  color: $clr-hover;
+  .contact-links a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: $clr-grey-1;
+    font-size: 1.25rem;
+    transition: $transition;
+    &:hover {
+      color: $clr-hover;
+    }
+  }
 }

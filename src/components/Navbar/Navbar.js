@@ -1,8 +1,9 @@
 import React from "react";
 import "./Navbar.scss";
 import { useTranslation } from "react-i18next";
-import { useGlobalContext } from "../../context.js";
+import { useGlobalContext } from "../../context/context.js";
 import Sidebar from "../Sidebar/Sidebar";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const { t } = useTranslation();
   const { showSidebar, setShowSidebar } = useGlobalContext();
@@ -10,9 +11,9 @@ const Navbar = () => {
   return (
     <nav>
       <div className="navbar">
-        <a href="/">
-          <img src="/img/logo.png" alt="brand logo" className="nav-logo" />
-        </a>
+        <Link to="/">
+          <img src="/img/logo.png" alt="Ameneh Seyyedi" className="nav-logo" />
+        </Link>
         {!showSidebar && (
           <button className="nav-btn" onClick={() => setShowSidebar(true)}>
             {t("nav_btn")}

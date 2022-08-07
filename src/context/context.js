@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import data from "./data";
+import data from "../data";
 // import SingleProject from "./Pages/SingleProject/SingleProject";
 const AppContext = React.createContext();
 

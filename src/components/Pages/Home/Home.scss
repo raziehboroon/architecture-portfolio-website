@@ -1,0 +1,63 @@
+@import "../../../App.scss";
+main {
+  min-width: 100%;
+  // margin: 0 auto;
+}
+
+.homeSwiper {
+  width: 100% !important;
+  height: 100vh !important;
+  /* Fallback for browsers that do not support Custom Properties */
+  // height: calc(var(--vh, 1vh) * 100));
+  // position: relative;
+  overflow: hidden;
+  // box-shadow: $light_shadow;
+  // flex-grow: 1;
+  .homeSwiper_slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $clr-hover !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $clr-hover !important;
+  }
+}
+
+.slide-text {
+  max-width: 90%;
+  position: absolute;
+  padding: 0 1rem;
+  text-shadow: $dark-shadow;
+  // text-align: left;
+  text-justify: inter-word;
+  bottom: 4rem;
+  a {
+    text-decoration: none;
+    color: $clr-white;
+    &.first-slide {
+      color: $clr-black;
+    }
+  }
+  .slide-text_title {
+    letter-spacing: $spacing-normal;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .slide-text_subtitle {
+    text-transform: capitalize;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .slide-text {
+    max-width: 70%;
+    padding: 0 3rem;
+    bottom: 6rem;
+  }
+}

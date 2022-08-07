@@ -9,14 +9,14 @@ import "./App.scss";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Home from "./Pages/Home/Home";
-import About from "./Pages/About/About";
-import Contact from "./Pages/Contact/Contact";
+import Home from "./components/Pages/Home/Home";
+import About from "./components/Pages/About/About";
+import Contact from "./components/Pages/Contact/Contact";
 import Navbar from "./components/Navbar/Navbar";
-import Error from "./Pages/Error/Error";
+import Error from "./components/Pages/Error/Error";
 import Footer from "./components/Footer/Footer";
-import Projects from "./Pages/Projects/Projects";
-import SingleProject from "./Pages/SingleProject/SingleProject";
+import Projects from "./components/Pages/Projects/Projects";
+import SingleProject from "./components/Pages/SingleProject/SingleProject";
 
 function App() {
   // First we get the viewport height and we multiple it by 1% to get a value for a vh unit

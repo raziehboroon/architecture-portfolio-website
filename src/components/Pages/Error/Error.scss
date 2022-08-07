@@ -1,9 +1,7 @@
-@import "../../App.scss";
+@import "../../../App.scss";
 
-.about-section {
+.error-section {
   min-height: calc(100vh - 7rem);
   /* Fallback for browsers that do not support Custom Properties */
   min-height: calc(calc(var(--vh, 1vh) * 100) - 7rem);
-  background-color: $clr-background;
-  padding: 4rem 1rem 0;
 }
