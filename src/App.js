@@ -7,7 +7,7 @@
 // import Language from "./components/Language/Language";
 import "./App.scss";
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./components/Pages/Home/Home";
 import About from "./components/Pages/About/About";
@@ -28,29 +28,16 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/about">
-          <About />
-        </Route>
-        <Route exact path="/contact">
-          <Contact />
-        </Route>
-        <Route exact path="/categories/:title" children={<Projects />}></Route>
-        <Route
-          exact
-          path="/categories/:title/:id"
-          children={<SingleProject />}
-        ></Route>
-        <Route exact path="/categories">
-          <Works />
-        </Route>
-        <Route path="*">
-          <Error />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="categories/:title" element={<Projects />} />
+        {/* <Route path="categories/:title" children={<Projects />}></Route> */}
+        <Route path="categories/:title/:id" element={<SingleProject />} />
+        <Route path="categories" element={<Works />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
       <Footer />
     </Router>
   );
