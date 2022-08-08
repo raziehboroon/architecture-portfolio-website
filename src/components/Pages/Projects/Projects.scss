@@ -1,12 +1,16 @@
 @import "../../../App.scss";
-
-.projects-container {
+main {
   min-width: 100%;
   min-height: calc(100vh - 7rem);
   /* Fallback for browsers that do not support Custom Properties */
   min-height: calc(calc(var(--vh, 1vh) * 100) - 7rem);
   background-color: $clr-background;
-  padding-top: 5rem;
+  padding: 5rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.projects-container {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;

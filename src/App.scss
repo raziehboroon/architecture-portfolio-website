@@ -95,6 +95,36 @@ p {
   margin-bottom: 1.25rem;
   // color: var(--clr-grey-4);
 }
+
+.navigation_btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: $clr-black;
+  transition: $transition;
+
+  margin: 2rem 0;
+  &:hover {
+    color: $clr-hover;
+  }
+  h3 {
+    padding: 0 0.5rem;
+    margin-bottom: 0;
+  }
+  .navigation_btn_icon {
+    font-size: 2rem;
+    // font-size: 1.5rem;
+    // margin-bottom: 0.2rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .navigation_btn_icon {
+    // font-size: 2.5rem;
+  }
+}
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 3.5rem;

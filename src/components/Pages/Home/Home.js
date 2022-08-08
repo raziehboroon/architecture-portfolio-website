@@ -15,6 +15,7 @@ import SwiperCore, {
   Keyboard,
   Parallax,
   Autoplay,
+  Lazy,
 } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -34,6 +35,7 @@ SwiperCore.use([
   Keyboard,
   Parallax,
   Autoplay,
+  Lazy,
 ]);
 const Home = () => {
   // const { categories } = useGlobalContext();
@@ -58,6 +60,7 @@ const Home = () => {
         // Parallax={true}
         loop={true}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
+        lazy={true}
       >
         {items.carousel.map((item) => (
           <SwiperSlide key={item.id} className="homeSwiper_slide">

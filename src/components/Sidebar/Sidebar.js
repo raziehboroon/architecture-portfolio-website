@@ -31,7 +31,7 @@ const Sidebar = () => {
         </li>
         <li>
           <Link
-            to="/#categories"
+            to="/categories"
             className="nav-link changeDir"
             onClick={() => setShowSidebar(false)}
           >

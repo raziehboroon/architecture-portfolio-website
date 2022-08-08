@@ -1,16 +1,19 @@
 @import "../../../App.scss";
-
-.singleProject-container {
+main {
   width: 100%;
   min-height: calc(100vh - 7rem);
   min-height: calc(var(--vh, 1vh) * 100 - 7rem);
+  background-color: $clr-grey-10;
   padding-top: 5rem;
+}
+.singleProject-container {
   display: flex;
   flex-direction: column;
 }
 
 .projectSwiper {
-  background-color: $clr-grey-10;
+  background-color: $clr-grey-9;
+  border-radius: 0.3rem;
   padding: 2rem 0;
   width: 100% !important;
   height: 60vh !important;
@@ -53,27 +56,9 @@
   }
 }
 
-.singleProject_btn {
-  text-decoration: none;
-  color: $clr-black;
-  transition: $transition;
-  padding-top: 2rem;
-  &:hover {
-    color: $clr-hover;
-  }
-  .singleProject_icon {
-    // font-size: 2.5rem;
-    font-size: 1.5rem;
-    margin-bottom: 0.2rem;
-  }
-}
-
 @media screen and (min-width: 800px) {
   .singleProject-container .projectSwiper {
     height: 75vh !important;
-  }
-  .singleProject_icon {
-    font-size: 2.5rem;
   }
 }
 

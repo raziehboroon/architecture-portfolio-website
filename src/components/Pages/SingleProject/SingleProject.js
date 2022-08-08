@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../../context/context";
 // import Slider from "../../Slider/Slider";
 import { useTranslation } from "react-i18next";
+import { IconContext } from "react-icons/lib";
 import { RiLayoutGridFill } from "react-icons/ri";
 
 import SwiperCore, {
@@ -16,6 +17,7 @@ import SwiperCore, {
   Keyboard,
   Parallax,
   Autoplay,
+  Lazy,
 } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -35,6 +37,7 @@ SwiperCore.use([
   Keyboard,
   Parallax,
   Autoplay,
+  Lazy,
 ]);
 
 const SingleProject = () => {
@@ -49,7 +52,7 @@ const SingleProject = () => {
   const btnText = categories.find((cat) => cat.name === title).title;
 
   return (
-    <>
+    <main>
       {singleProjectArr.length !== 0 && (
         <div className="singleProject-container">
           <Swiper
@@ -64,6 +67,7 @@ const SingleProject = () => {
             keyboard
             loop={true}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
+            lazy={{ loadPrevNext: true }}
           >
             {singleProjectArr[0].images.map((image) => (
               <SwiperSlide key={image.id} className={"projectSwiper_slide"}>
@@ -91,17 +95,18 @@ const SingleProject = () => {
                 <span>{t(singleProjectArr[0].year)}</span>
               </h3>
             </div>
-            <Link to={`/projects/${title}`} className="singleProject_btn">
-              <h3>
-                <RiLayoutGridFill className="singleProject_icon" />
-
-                {` ${t("btn_prefix")} ${t(btnText)}`}
-              </h3>
+            <Link to={`/categories/${title}`} className="navigation_btn">
+              <IconContext.Provider
+                value={{ className: "navigation_btn_icon" }}
+              >
+                <RiLayoutGridFill />
+              </IconContext.Provider>
+              <h3>{` ${t("btn_prefix")} ${t(btnText)}`}</h3>
             </Link>
           </div>
         </div>
       )}
-    </>
+    </main>
   );
 };
 

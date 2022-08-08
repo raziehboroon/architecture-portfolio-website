@@ -13,7 +13,7 @@ const Category = () => {
       {categories.map((item, index) => {
         return (
           <article key={item.id} className="category">
-            <Link to={`/projects/${item.name}`}>
+            <Link to={`/categories/${item.name}`}>
               <img src={item.url} alt={item.title} />
               <div className="category-text">
                 <h1 className="category-text_title">{t(item.title)}</h1>
