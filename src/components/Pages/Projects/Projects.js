@@ -16,7 +16,7 @@ const Projects = () => {
   }, [title, setCurrentCategory]);
 
   return (
-    <main>
+    <div className="projects-section">
       <section className="projects-container">
         {currentProjects.map((project) => {
           return (
@@ -46,7 +46,7 @@ const Projects = () => {
         </IconContext.Provider>
         <h3>{` ${t("btn_all_categories")}`}</h3>
       </Link>
-    </main>
+    </div>
   );
 };
 

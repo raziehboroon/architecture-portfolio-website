@@ -52,7 +52,7 @@ const SingleProject = () => {
   const btnText = categories.find((cat) => cat.name === title).title;
 
   return (
-    <main>
+    <div className="singleProject-section">
       {singleProjectArr.length !== 0 && (
         <div className="singleProject-container">
           <Swiper
@@ -106,7 +106,7 @@ const SingleProject = () => {
           </div>
         </div>
       )}
-    </main>
+    </div>
   );
 };
 

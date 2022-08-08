@@ -17,7 +17,7 @@ import Error from "./components/Pages/Error/Error";
 import Footer from "./components/Footer/Footer";
 import Projects from "./components/Pages/Projects/Projects";
 import SingleProject from "./components/Pages/SingleProject/SingleProject";
-import CategoriesPage from "./components/Pages/CategoriesPage/CategoriesPage";
+import Works from "./components/Pages/Works/Works";
 
 function App() {
   // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -45,7 +45,7 @@ function App() {
           children={<SingleProject />}
         ></Route>
         <Route exact path="/categories">
-          <CategoriesPage />
+          <Works />
         </Route>
         <Route path="*">
           <Error />

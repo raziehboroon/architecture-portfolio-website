@@ -1,16 +1,16 @@
 import React from "react";
-import "./CategoriesPage.scss";
+import "./Works.scss";
 import Category from "../../Category/Category";
 import { IconContext } from "react-icons/lib";
 import { AiFillHome } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-const CategoriesPage = () => {
+const Works = () => {
   const { t } = useTranslation();
   return (
-    <main>
-      <div className="CategoriesPage-section">
+    <div className="works-container">
+      <div className="works-center">
         <Category />
 
         <Link to="/" className="navigation_btn">
@@ -20,8 +20,8 @@ const CategoriesPage = () => {
           <h3>{t("nav_link1")}</h3>
         </Link>
       </div>
-    </main>
+    </div>
   );
 };
 
-export default CategoriesPage;
+export default Works;
