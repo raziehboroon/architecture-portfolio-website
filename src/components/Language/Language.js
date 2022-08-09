@@ -1,6 +1,6 @@
 import "./Language.scss";
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+// Translation
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import cookies from "js-cookie";

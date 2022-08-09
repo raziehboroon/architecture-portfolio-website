@@ -1,12 +1,14 @@
-import React from "react";
 import "./Navbar.scss";
-import { useTranslation } from "react-i18next";
-import { useGlobalContext } from "../../context/context.js";
-import Sidebar from "../Sidebar/Sidebar";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+// Component(s)
+import Sidebar from "../Sidebar/Sidebar";
+// Translator
+import { useTranslation } from "react-i18next";
+
 const Navbar = () => {
   const { t } = useTranslation();
-  const { showSidebar, setShowSidebar } = useGlobalContext();
+  const [showSidebar, setShowSidebar] = useState(false);
 
   return (
     <nav>
@@ -20,8 +22,7 @@ const Navbar = () => {
           </button>
         )}
       </div>
-      {/* {showSidebar && <Sidebar />} */}
-      <Sidebar />
+      <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
     </nav>
   );
 };

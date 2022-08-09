@@ -1,14 +1,15 @@
-import React from "react";
 import "./Sidebar.scss";
+import React from "react";
 import { Link } from "react-router-dom";
-import { VscChromeClose } from "react-icons/vsc";
+// Component(s)
 import Language from "../Language/Language";
+// Translator
 import { useTranslation } from "react-i18next";
-import { useGlobalContext } from "../../context/context.js";
+// Icon(s)
+import { VscChromeClose } from "react-icons/vsc";
 
-const Sidebar = () => {
+const Sidebar = ({ showSidebar, setShowSidebar }) => {
   const { t } = useTranslation();
-  const { showSidebar, setShowSidebar } = useGlobalContext();
 
   return (
     <div className={`sidebar ${showSidebar && "open-sidebar"}`}>

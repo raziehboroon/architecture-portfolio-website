@@ -1,5 +1,6 @@
-import React from "react";
 import "./GlobeIcon.scss";
+import React from "react";
+
 const GlobeIcon = ({ width = 24, height = 24 }) => {
   return (
     <svg

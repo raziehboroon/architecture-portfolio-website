@@ -1,19 +1,26 @@
-import React, { useEffect } from "react";
 import "./Projects.scss";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useGlobalContext } from "../../../context/context";
-import { useTranslation } from "react-i18next";
 import { useParams } from "react-router";
+// Context
+import { useGlobalContext } from "../../../context/context";
+// Funstion(s)
+import { filterProjects } from "../../../helpers/functions";
+// Translator
+import { useTranslation } from "react-i18next";
+// Icon(s)
 import { IconContext } from "react-icons/lib";
 import { RiLayoutGridFill } from "react-icons/ri";
 
 const Projects = () => {
-  const { currentProjects, setCurrentCategory } = useGlobalContext();
+  const { projects } = useGlobalContext();
+  const [currentProjects, setCurrentProjects] = useState([]);
   const { t } = useTranslation();
   const { title } = useParams();
+
   useEffect(() => {
-    setCurrentCategory(title);
-  }, [title, setCurrentCategory]);
+    setCurrentProjects(filterProjects(title, projects));
+  }, [title, projects]);
 
   return (
     <div className="projects-section">

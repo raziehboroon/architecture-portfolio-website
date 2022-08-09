@@ -1,46 +1,8 @@
 // Site developed by: Razieh Boroom | Razieh.Boroon@gmail.com
-
+@import "-variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&family=Tajawal:wght@300;900&display=swap");
 
 @import url("http://fonts.googleapis.com/earlyaccess/scheherazade.css");
-
-$ff-primary-en: "Oswald", sans-serif;
-$ff-secondary-en: "Permanent Marker", cursive;
-// $ff-primary-fa: "Tajawal", sans-serif;
-$ff-primary-fa: "Scheherazade", serif;
-$transition: all 0.3s ease-in-out;
-$spacing-normal: 0.1rem;
-$spacing-title: -0.2rem;
-$radius: 0.3rem;
-$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-$dark-shadow: 1px 5px 15px rgba(0, 0, 0, 0.4);
-$light-white-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
-$dark-white-shadow: 1px 5px 15px rgba(255, 255, 255, 0.4);
-$max-width: 1170px;
-$clr-bej: #eff3f2;
-$clr-white: #fff;
-$clr-black: #111;
-$clr-grey: #777;
-$clr-footer: #1f1a38;
-$clr-hover: rgb(223, 64, 202);
-$clr-background: hsl(210, 36%, 96%);
-// $clr-primary-4: hsl(42, 63%, 48%);
-/* darkest grey - used for headings */
-$clr-grey-1: hsl(209, 61%, 16%);
-$clr-grey-3: hsl(209, 34%, 30%);
-$clr-grey-4: hsl(209, 28%, 39%);
-/* darkest grey - used for headings */
-$clr-grey-1: hsl(209, 61%, 16%);
-$clr-grey-2: hsl(211, 39%, 23%);
-$clr-grey-3: hsl(209, 34%, 30%);
-$clr-grey-4: hsl(209, 28%, 39%);
-/* grey used for paragraphs */
-$clr-grey-5: hsl(210, 22%, 49%);
-$clr-grey-6: hsl(209, 23%, 60%);
-$clr-grey-7: hsl(211, 27%, 70%);
-$clr-grey-8: hsl(210, 31%, 80%);
-$clr-grey-9: hsl(212, 33%, 89%);
-$clr-grey-10: hsl(210, 36%, 96%);
 
 *,
 ::before,

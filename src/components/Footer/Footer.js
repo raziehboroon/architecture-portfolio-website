@@ -1,5 +1,6 @@
-import React from "react";
 import "./Footer.scss";
+import React from "react";
+// Icon(s)
 import { FaLinkedin } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";

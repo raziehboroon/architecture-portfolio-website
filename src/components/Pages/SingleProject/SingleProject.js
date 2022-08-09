@@ -1,12 +1,24 @@
-import React, { useEffect } from "react";
 import "./SingleProject.scss";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+// Context
 import { useGlobalContext } from "../../../context/context";
-// import Slider from "../../Slider/Slider";
+// Function(s)
+import { getSingleProject } from "../../../helpers/functions";
+// Translator
 import { useTranslation } from "react-i18next";
+// Icon(s)
 import { IconContext } from "react-icons/lib";
 import { RiLayoutGridFill } from "react-icons/ri";
+
+// Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+import "swiper/components/navigation/navigation.min.css";
+import "swiper/components/pagination/pagination.min.css";
 
 import SwiperCore, {
   Navigation,
@@ -19,14 +31,6 @@ import SwiperCore, {
   Autoplay,
   Lazy,
 } from "swiper";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/swiper-bundle.min.css";
-import "swiper/swiper.min.css";
-import "swiper/components/navigation/navigation.min.css";
-import "swiper/components/pagination/pagination.min.css";
 
 SwiperCore.use([
   Navigation,
@@ -41,13 +45,14 @@ SwiperCore.use([
 ]);
 
 const SingleProject = () => {
+  const [singleProjectArr, setSingleProjectArr] = useState([]);
+  const { categories, projects } = useGlobalContext();
   const { t } = useTranslation();
   const { id, title } = useParams();
-  const { setSingleProjectId, singleProjectArr, categories } =
-    useGlobalContext();
+
   useEffect(() => {
-    setSingleProjectId(parseInt(id));
-  }, [id, setSingleProjectId]);
+    setSingleProjectArr(getSingleProject(parseInt(id), projects));
+  }, [id, projects]);
 
   const btnText = categories.find((cat) => cat.name === title).title;
 
@@ -55,6 +60,7 @@ const SingleProject = () => {
     <div className="singleProject-section">
       {singleProjectArr.length !== 0 && (
         <div className="singleProject-container">
+          {/* single project Carousel */}
           <Swiper
             className="projectSwiper"
             direction="horizontal"
@@ -75,17 +81,7 @@ const SingleProject = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          {/* <Slider
-            slideData={singleProjectArr[0].images}
-            slideInfo={false}
-            slideRightButton={true}
-            slideLeftButton={false}
-            slideDots={false}
-            sliderWidth={100}
-            sliderHeight={60}
-            slideSize={"contain"}
-            className="singleProject_slider"
-          /> */}
+          {/* single project info */}
           <div className="singleProject_info">
             <div className="singleProject_text">
               <h2>{t(singleProjectArr[0].title)}</h2>
@@ -95,6 +91,7 @@ const SingleProject = () => {
                 <span>{t(singleProjectArr[0].year)}</span>
               </h3>
             </div>
+            {/* Navigation Button */}
             <Link to={`/categories/${title}`} className="navigation_btn">
               <IconContext.Provider
                 value={{ className: "navigation_btn_icon" }}
