@@ -47,6 +47,7 @@ const Home = () => {
   return (
     <main>
       {/* Carousel */}
+
       <Swiper
         className="homeSwiper"
         // direction="horizontal"
@@ -67,21 +68,26 @@ const Home = () => {
       >
         {/* Swiper Slides */}
         {carousel &&
-          carousel.map((item) => (
+          carousel.map((item, index) => (
             <SwiperSlide key={item.id} className="homeSwiper_slide">
-              <img src={item.url} alt={t(item.title)} />
+              <img src={item.url || item.images[0].url} alt={t(item.title)} />
               <div className={"slide-text"}>
                 <Link
-                  to={item.path}
-                  className={`${item.id === 1 && "first-slide"}`}
+                  to={item.path || `/categories/${item.category[0]}/${item.id}`}
+                  className={`${item.path && "first-slide"}`}
                 >
                   <h1 className="slide-text_title">{t(item.title)}</h1>
-                  <h2 className="slide-text_subtitle">{t(item.subtitle)}</h2>
+                  <h2 className="slide-text_subtitle">
+                    {item.path
+                      ? t("carousel_subtitle_1")
+                      : t("carousel_subtitle_2")}
+                  </h2>
                 </Link>
               </div>
             </SwiperSlide>
           ))}
       </Swiper>
+
       {/* Categories */}
       <Category />
     </main>

@@ -41,6 +41,9 @@ main {
   a {
     text-decoration: none;
     color: $clr-white;
+    &:hover {
+      color: $clr-hover;
+    }
     &.first-slide {
       color: $clr-black;
     }

@@ -1,8 +1,12 @@
 import React, { useState, useContext, useEffect } from "react";
 import data from "../data";
+// Function(s)
+import { getFeaturedProject } from "../helpers/functions";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+  // information
+  const [mainInfo, setMainInfo] = useState([]);
   //Home Page Carousel Data
   const [carousel, setCarousel] = useState([]);
   // all categories
@@ -11,10 +15,14 @@ const AppProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    setCarousel(data.carousel);
+    setMainInfo(data.mainInfo);
     setCategories(data.categories);
     setProjects(data.projects);
   }, []);
+
+  useEffect(() => {
+    setCarousel(getFeaturedProject(mainInfo, projects));
+  }, [projects, mainInfo]);
 
   return (
     <AppContext.Provider

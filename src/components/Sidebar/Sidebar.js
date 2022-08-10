@@ -1,5 +1,5 @@
 import "./Sidebar.scss";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 // Component(s)
 import Language from "../Language/Language";
@@ -10,9 +10,25 @@ import { VscChromeClose } from "react-icons/vsc";
 
 const Sidebar = ({ showSidebar, setShowSidebar }) => {
   const { t } = useTranslation();
+  const sidebarRef = useRef();
+  // const [isClicked, setIsClicked] = useState(false);
 
+  useEffect(() => {
+    const handleClickOutsideSidebar = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setShowSidebar(false);
+      } else {
+        setShowSidebar(true);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutsideSidebar);
+  });
   return (
-    <div className={`sidebar ${showSidebar && "open-sidebar"}`}>
+    <div
+      ref={sidebarRef}
+      className={`sidebar ${showSidebar && "open-sidebar"}`}
+    >
       <div className="nav-icons">
         <Language />
         <VscChromeClose

@@ -20,3 +20,8 @@ export const getSingleProject = (singleProjectId, projects) => {
   );
   return singleProject;
 };
+
+export const getFeaturedProject = (carousel, projects) => {
+  const featuredProject = projects.filter((project) => project.featured);
+  return [carousel[0], ...featuredProject];
+};

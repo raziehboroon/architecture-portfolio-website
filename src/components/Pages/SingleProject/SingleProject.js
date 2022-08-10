@@ -4,6 +4,8 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 // Context
 import { useGlobalContext } from "../../../context/context";
+// Component(s)
+// import NavigationButtons from "../../NavigationButtons/NavigationButtons";
 // Function(s)
 import { getSingleProject } from "../../../helpers/functions";
 // Translator
@@ -100,6 +102,7 @@ const SingleProject = () => {
               </IconContext.Provider>
               <h3>{` ${t("btn_prefix")} ${t(btnText)}`}</h3>
             </Link>
+            {/* <NavigationButtons name={"btn_prefix"} name1={btnText} /> */}
           </div>
         </div>
       )}

@@ -1,52 +1,10 @@
 const items = {
-  carousel: [
+  mainInfo: [
     {
       id: 1,
       title: "carousel_title_1",
       subtitle: "carousel_subtitle_1",
       url: "/img/hugo-sousa-BghGseQbAkA-unsplash.jpg",
-      path: "/about",
-    },
-    {
-      id: 2,
-      title: "carousel_title_2",
-      subtitle: "carousel_subtitle_2",
-      url: "/img/pexels-vecislavas-popa-1571459.jpg",
-      path: "/projects/interior",
-    },
-    {
-      id: 3,
-      title: "carousel_title_3",
-      subtitle: "carousel_subtitle_3",
-      url: "/img/dannie-jing-3GZlhROZIQg-unsplash.jpg",
-      path: "/projects/painting",
-    },
-    {
-      id: 4,
-      title: "carousel_title_4",
-      subtitle: "carousel_subtitle_4",
-      url: "/img/pexels-karolina-grabowska-7283170.jpg",
-      path: "/projects/fashion",
-    },
-    {
-      id: 5,
-      title: "carousel_title_5",
-      subtitle: "carousel_subtitle_5",
-      url: "/img/144aa06e3533a4d74e21603b07cee465.jpg",
-      path: "/projects/lighting",
-    },
-    {
-      id: 6,
-      title: "carousel_title_6",
-      subtitle: "carousel_subtitle_6",
-      url: "/img/0110.jpg",
-      path: "/projects/sculpture",
-    },
-    {
-      id: 7,
-      title: "carousel_title_7",
-      subtitle: "carousel_subtitle_7",
-      url: "/img/vfw33x2v0ocvywho3cof.jpg",
       path: "/about",
     },
   ],
@@ -118,6 +76,7 @@ const items = {
   projects: [
     {
       id: 1,
+      featured: false,
       category: ["residental"],
       title: "project_title_1",
       location: "project_location_1",
@@ -148,6 +107,7 @@ const items = {
     },
     {
       id: 2,
+      featured: false,
       category: ["residental", "interior"],
       title: "project_title_2",
       location: "project_location_2",
@@ -178,6 +138,7 @@ const items = {
     },
     {
       id: 3,
+      featured: false,
       category: ["residental"],
       title: "project_title_3",
       location: "project_location_3",
@@ -213,6 +174,7 @@ const items = {
     },
     {
       id: 4,
+      featured: true,
       category: ["residental"],
       title: "project_title_4",
       location: "project_location_4",
@@ -227,6 +189,7 @@ const items = {
     },
     {
       id: 5,
+      featured: true,
       category: ["residental"],
       title: "project_title_5",
       location: "project_location_5",
@@ -241,6 +204,7 @@ const items = {
     },
     {
       id: 6,
+      featured: true,
       category: ["sculpture"],
       title: "project_title_6",
       location: "project_location_6",
@@ -253,6 +217,7 @@ const items = {
     },
     {
       id: 7,
+      featured: false,
       category: ["sculpture"],
       title: "project_title_7",
       location: "project_location_7",
@@ -267,6 +232,7 @@ const items = {
     },
     {
       id: 8,
+      featured: false,
       category: ["sculpture"],
       title: "project_title_8",
       location: "project_location_8",
@@ -281,6 +247,7 @@ const items = {
     },
     {
       id: 9,
+      featured: false,
       category: ["sculpture"],
       title: "project_title_9",
       location: "project_location_9",
@@ -292,6 +259,7 @@ const items = {
     },
     {
       id: 10,
+      featured: true,
       category: ["sculpture"],
       title: "project_title_10",
       location: "project_location_10",
@@ -322,6 +290,7 @@ const items = {
     },
     {
       id: 11,
+      featured: true,
       category: ["residental", "building"],
       title: "project_title_11",
       location: "project_location_11",
@@ -363,6 +332,7 @@ const items = {
     },
     {
       id: 12,
+      featured: true,
       category: ["residental", "building"],
       title: "project_title_12",
       location: "project_location_12",

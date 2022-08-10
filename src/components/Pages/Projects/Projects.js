@@ -6,11 +6,11 @@ import { useParams } from "react-router";
 import { useGlobalContext } from "../../../context/context";
 // Funstion(s)
 import { filterProjects } from "../../../helpers/functions";
+// Component(s)
+import NavigationButtons from "../../NavigationButtons/NavigationButtons";
+
 // Translator
 import { useTranslation } from "react-i18next";
-// Icon(s)
-import { IconContext } from "react-icons/lib";
-import { RiLayoutGridFill } from "react-icons/ri";
 
 const Projects = () => {
   const { projects } = useGlobalContext();
@@ -47,12 +47,7 @@ const Projects = () => {
           );
         })}
       </section>
-      <Link to="/categories" className="navigation_btn">
-        <IconContext.Provider value={{ className: "navigation_btn_icon" }}>
-          <RiLayoutGridFill />
-        </IconContext.Provider>
-        <h3>{` ${t("btn_all_categories")}`}</h3>
-      </Link>
+      <NavigationButtons name={"btn_all_categories"} />
     </div>
   );
 };
