@@ -7,15 +7,17 @@ import { AiFillHome } from "react-icons/ai";
 // Translator
 import { useTranslation } from "react-i18next";
 
-const NavigationButtons = ({ name, name1 = "" }) => {
+const NavigationButtons = ({ name, name1 = "", url }) => {
   const { t } = useTranslation();
   return (
     <div>
-      <Link to="/" className="navigation_btn">
+      <Link to={url} className="navigation_btn">
         <IconContext.Provider value={{ className: "navigation_btn_icon" }}>
           <AiFillHome />
         </IconContext.Provider>
-        <h3>{t(`${name}`)}</h3>
+        <h3>
+          {t(`${name}`)} {t(`${name1}`)}
+        </h3>
       </Link>
     </div>
   );

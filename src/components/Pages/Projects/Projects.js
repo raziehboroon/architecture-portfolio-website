@@ -47,7 +47,7 @@ const Projects = () => {
           );
         })}
       </section>
-      <NavigationButtons name={"btn_all_categories"} />
+      <NavigationButtons name={"btn_all_categories"} url={"/categories"} />
     </div>
   );
 };

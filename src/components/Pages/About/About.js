@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="about-section">
       <h2>you will read about me one day ! </h2>
-      <NavigationButtons name={"nav_link1"} />
+      <NavigationButtons name={"nav_link1"} url={"/"} />
     </div>
   );
 };

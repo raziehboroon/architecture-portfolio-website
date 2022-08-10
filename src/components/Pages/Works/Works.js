@@ -8,7 +8,7 @@ const Works = () => {
   return (
     <div className="works-container">
       <Category />
-      <NavigationButtons name={"nav_link1"} />
+      <NavigationButtons name={"nav_link1"} url={"/"} />
     </div>
   );
 };

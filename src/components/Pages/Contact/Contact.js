@@ -1,5 +1,7 @@
 import "./Contact.scss";
 import React from "react";
+// Component(s)
+import NavigationButtons from "../../NavigationButtons/NavigationButtons";
 // Icon(s)
 import { FaEnvelope } from "react-icons/fa";
 import { FaPhoneSquare } from "react-icons/fa";
@@ -20,6 +22,7 @@ const Contact = () => {
           <FaPhoneSquare /> &nbsp; 09128067800
         </a>
       </div>
+      <NavigationButtons name={"nav_link1"} url={"/"} />
     </div>
   );
 };

@@ -1,18 +1,14 @@
 import "./SingleProject.scss";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import { Link } from "react-router-dom";
 // Context
 import { useGlobalContext } from "../../../context/context";
 // Component(s)
-// import NavigationButtons from "../../NavigationButtons/NavigationButtons";
+import NavigationButtons from "../../NavigationButtons/NavigationButtons";
 // Function(s)
 import { getSingleProject } from "../../../helpers/functions";
 // Translator
 import { useTranslation } from "react-i18next";
-// Icon(s)
-import { IconContext } from "react-icons/lib";
-import { RiLayoutGridFill } from "react-icons/ri";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -93,16 +89,11 @@ const SingleProject = () => {
                 <span>{t(singleProjectArr[0].year)}</span>
               </h3>
             </div>
-            {/* Navigation Button */}
-            <Link to={`/categories/${title}`} className="navigation_btn">
-              <IconContext.Provider
-                value={{ className: "navigation_btn_icon" }}
-              >
-                <RiLayoutGridFill />
-              </IconContext.Provider>
-              <h3>{` ${t("btn_prefix")} ${t(btnText)}`}</h3>
-            </Link>
-            {/* <NavigationButtons name={"btn_prefix"} name1={btnText} /> */}
+            <NavigationButtons
+              name={"btn_prefix"}
+              name1={btnText}
+              url={`/categories/${title}`}
+            />
           </div>
         </div>
       )}

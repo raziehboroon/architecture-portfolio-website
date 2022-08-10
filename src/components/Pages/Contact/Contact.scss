@@ -6,19 +6,23 @@
   min-height: calc(calc(var(--vh, 1vh) * 100) - 7rem);
   padding: 4rem 1rem 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: $clr-background;
-  .contact-links a {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    color: $clr-grey-1;
-    font-size: 1.25rem;
-    transition: $transition;
-    &:hover {
-      color: $clr-hover;
+  .contact-links {
+    padding-top: 2rem;
+    a {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: $clr-grey-1;
+      font-size: 1.25rem;
+      transition: $transition;
+      &:hover {
+        color: $clr-hover;
+      }
     }
   }
 }
