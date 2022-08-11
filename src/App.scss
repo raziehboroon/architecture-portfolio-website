@@ -1,5 +1,6 @@
 // Site developed by: Razieh Boroom | Razieh.Boroon@gmail.com
 @import "-variables.scss";
+
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&family=Tajawal:wght@300;900&display=swap");
 
 @import url("http://fonts.googleapis.com/earlyaccess/scheherazade.css");
@@ -34,7 +35,7 @@ h4 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary-en);
+  font-family: $ff-primary-en;
 }
 h1 {
   font-size: 2rem;
