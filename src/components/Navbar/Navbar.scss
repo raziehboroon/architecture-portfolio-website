@@ -25,6 +25,64 @@ nav {
     height: 3.5rem;
     // left: 1rem;
   }
+
+  .history-btn {
+    position: relative;
+    margin-left: 2rem;
+    padding: 0.2rem 0.4rem;
+    background-color: blueviolet;
+    color: white;
+
+    .history-links-container {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      background-color: pink;
+      border-radius: 0.3rem;
+      color: white;
+      width: 10rem;
+      height: 30vh;
+
+      .history-content {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        .links-container {
+          height: 70%;
+          overflow-y: hidden;
+          .link {
+            text-decoration: none;
+            display: block;
+            color: darkblue;
+            padding: 0 0.5rem;
+            text-transform: capitalize;
+          }
+        }
+        .expanded-links-container {
+          height: 100%;
+          overflow-y: scroll;
+        }
+        .show-more-btn {
+          position: absolute;
+          text-transform: capitalize;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          text-align: center;
+          color: darkgray;
+          border-top: 0.2rem solid darkgray;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .expanded-history-links-container {
+      height: 80vh;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
   .nav-btn {
     padding: 0.5rem 1rem;
     border: none;

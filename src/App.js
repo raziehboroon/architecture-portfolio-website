@@ -20,6 +20,11 @@ import SingleProject from "./components/Pages/SingleProject/SingleProject";
 import Works from "./components/Pages/Works/Works";
 
 function App() {
+  // const All = () => {
+  //   const location = useLocation();
+  //   console.log({ location });
+  //   return <div>{location.pathname}</div>;
+  // };
   // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
   let vh = window.innerHeight * 0.01;
   // Then we set the value in the --vh custom property to the root of the document
@@ -29,6 +34,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
+        {/* <Route path="/" element={<All />} /> */}
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
